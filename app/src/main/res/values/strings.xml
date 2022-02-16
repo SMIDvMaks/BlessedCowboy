@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Blessed Cowboy</string>
+    <string name="start_game">Start Game</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="exut_game">Exit</string>
+
+</resources>
