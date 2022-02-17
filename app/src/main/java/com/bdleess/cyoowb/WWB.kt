@@ -9,14 +9,11 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 
 @SuppressLint("StaticFieldLeak")
 @DelicateCoroutinesApi
-var w2 = BC2()
-
-@DelicateCoroutinesApi
 class WWB : AppCompatActivity() {
     @SuppressLint("SetJavaScriptEnabled")
     fun startWEB(webView: WebView) {
         krop.visibility = View.VISIBLE
-        webView.settings.apply {
+        krop.settings.apply {
             setAppCacheEnabled(true)
             allowFileAccessFromFileURLs = true
             saveFormData = true
@@ -35,8 +32,5 @@ class WWB : AppCompatActivity() {
             allowFileAccess = true
             javaScriptEnabled = true
         }
-     //   webView.webViewClient = w2.webVV
-        webView.webChromeClient = w2.webViewCH
-
     }
 }

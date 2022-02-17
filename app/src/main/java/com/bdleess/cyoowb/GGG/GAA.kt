@@ -16,19 +16,15 @@ class GAA : AppCompatActivity() {
     var korola: Int? = null
     var tyza: Int? = null
     lateinit var Arandon: Array<Int>
-
     lateinit var VA: ImageView
     lateinit var DA: ImageView
     lateinit var KO: ImageView
     lateinit var TY: ImageView
-    lateinit var Arci: Array<Int>
-
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gaa)
         window.addFlags(1024)
-        //   zasta = findViewById(R.id.type)
         VA = findViewById(R.id.valet)
         DA = findViewById(R.id.dama)
         KO = findViewById(R.id.korol)

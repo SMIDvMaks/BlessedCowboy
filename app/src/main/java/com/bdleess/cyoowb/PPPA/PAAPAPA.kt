@@ -1,123 +1,118 @@
 package com.bdleess.cyoowb.PPPA
 
-import android.content.Context
 import android.content.Intent
 import android.util.Base64
-import android.util.Log
 import com.bdleess.cyoowb.*
 import com.onesignal.OneSignal
-import com.bdleess.cyoowb.DDAA.KeyGist
-import com.bdleess.cyoowb.DDAA.link
+import com.bdleess.cyoowb.DDAA.reperes2
+import com.bdleess.cyoowb.DDAA.reperes
 import com.bdleess.cyoowb.GGG.STActivity
 import kotlinx.coroutines.DelicateCoroutinesApi
 
-var packageNameSD = "Y29tLnd0aXNsZWR3LnRlcnJldWFz"
-var OneSignalID = "66bae02e-f070-41db-a574-729896d497c9"
-var adverID: String? = null
-var appsFlyerID: String? = null
-var apDevKey: String = "a2dBbUpqQ0xIcE5ZWEtacjh2dVhIQw=="
-var fbData: String? = null
+var paranded = "Y29tLnd0aXNsZWR3LnRlcnJldWFz"
+var operol = "NjZiYWUwMmUtZjA3MC00MWRiLWE1NzQtNzI5ODk2ZDQ5N2M5"
+var aciva: String? = null
+var relo: String? = null
+var firocika: String? = null
+
 
 @DelicateCoroutinesApi
 class PAAPAPA {
 
-    var staticKey: String? = null
-    var teamName: String? = null
-    var keyCompany: String? = null
-    var sub2: String? = null
-    var sub3: String? = null
-    var sub4: String? = null
-    var sub5: String? = null
-    lateinit var campLucky: Array<String>
+    var popCoo: String? = null
+    var Corere: String? = null
+    var keresese: String? = null
+    var he3: String? = null
+    var he4: String? = null
+    var he5: String? = null
+    var he6: String? = null
+    lateinit var getrike: Array<String>
 
-    fun ParseLine(parseline: String): String {
-        campLucky = parseline.split("::").toTypedArray()
-
-        try {
-            staticKey = campLucky[0]
-        } catch (e: Error) {
-            staticKey = ""
-        }
-        try {
-            teamName = campLucky[1]
-        } catch (e: Error) {
-            teamName = ""
-        }
+    fun Yeti(pasasa: String): String {
+        getrike = pasasa.split("::").toTypedArray()
 
         try {
-            keyCompany = campLucky[2]
+            he4 = getrike[4]
         } catch (e: Error) {
-            keyCompany = ""
+            he4 = ""
         }
         try {
-            sub2 = campLucky[3]
+            Corere = getrike[1]
         } catch (e: Error) {
-            sub2 = ""
+            Corere = ""
         }
         try {
-            sub3 = campLucky[4]
+            popCoo = getrike[0]
         } catch (e: Error) {
-            sub3 = ""
+            popCoo = ""
         }
         try {
-            sub4 = campLucky[5]
+            he3 = getrike[3]
         } catch (e: Error) {
-            sub4 = ""
+            he3 = ""
         }
         try {
-            sub5 = campLucky[6]
+            he6 = getrike[6]
         } catch (e: Error) {
-            sub5 = ""
+            he6 = ""
+        }
+        try {
+            keresese = getrike[2]
+        } catch (e: Error) {
+            keresese = ""
+        }
+        try {
+            he5 = getrike[5]
+        } catch (e: Error) {
+            he5 = ""
         }
 
-        OneSignal.sendTag(Decoder("c3ViX2FwcA=="), teamName)
-        val AppsLineDecode =
-            (staticKey + Decoder("P2J1bmRsZT0=") + Decoder(packageNameSD) + Decoder("JmFkX2lkPQ==") +
-                    adverID + Decoder("JmFwcHNfaWQ9") +
-                    appsFlyerID + Decoder("JmRldl9rZXk9") +
-                   Decoder(apDevKey) + Decoder("JnN1YjY9") +
-                    teamName + Decoder("JnN1Yjc9") + keyCompany +
-                    Decoder("JnN1YjI9") + sub2 +
-                    Decoder("JnN1YjM9") + sub3 +
-                    Decoder("JnN1YjQ9") + sub4 +
-                    Decoder("JnN1YjU9") + sub5)
-        return AppsLineDecode
+
+        OneSignal.sendTag(Height("c3ViX2FwcA=="), Corere)
+        val Cherege =
+            (popCoo + Height("P2J1bmRsZT0=") + Height(paranded) + Height("JmFkX2lkPQ==") +
+                    aciva + Height("JmFwcHNfaWQ9") +
+                    relo + Height("JmRldl9rZXk9") +
+                    Height(ppinge) + Height("JnN1YjY9") +
+                    Corere + Height("JnN1Yjc9") + keresese +
+                    Height("JnN1YjI9") + he3 +
+                    Height("JnN1YjM9") + he4 +
+                    Height("JnN1YjQ9") + he5 +
+                    Height("JnN1YjU9") + he6)
+        return Cherege
     }
 
-    fun ParseLineOrg() {
-        val param = KeyGist + Decoder("P2J1bmRsZT0=") + Decoder(packageNameSD) +
-                Decoder("JmFkX2lkPQ==") + adverID + Decoder("JmFwcHNfaWQ9") +
-                appsFlyerID + Decoder("JmRldl9rZXk9") + Decoder(apDevKey)
-        val link = link + param
+
+    fun Jeahq() {
+        val param = reperes2 + Height("P2J1bmRsZT0=") + Height(paranded) +
+                Height("JmFkX2lkPQ==") + aciva + Height("JmFwcHNfaWQ9") +
+                relo + Height("JmRldl9rZXk9") + Height(ppinge)
+        val link = reperes + param
         wwb.startWEB(krop)
         krop.loadUrl(link)
-        Log.e("TAG","LinkOrg: $link")
     }
 
-    fun Decoder(str: String): String {
-        val strdecode = String(Base64.decode(str, Base64.DEFAULT))
-        return strdecode
+    fun Height(gete: String): String {
+        val yepre = String(Base64.decode(gete, Base64.DEFAULT))
+        return yepre
     }
 
-    fun startTest(context: Context) {
-        Log.e("TAG","STSTST: ${apps_static}")
-        if (apps_static.equals(Decoder("Tm9uLW9yZ2FuaWM="))) {
-            val link = link + parametr
+    fun geHA(loqla : BC2, gunu: String) {
+        if (gunu.equals(Height("Tm9uLW9yZ2FuaWM="))) {
+            val link = reperes + parur
             wwb.startWEB(krop)
             krop.loadUrl(link)
-            Log.e("TAG", "APPS: $link")
-        } else if (fbData != null) {
-            val link = link + fbData
+        } else if (firocika != null) {
+            val link = reperes + firocika
             wwb.startWEB(krop)
             krop.loadUrl(link)
-            Log.e("TAG", "DEEPLINK: $link")
         } else {
-            if (KeyGist == Decoder("Tk8=")) {
-                val intent = Intent(context, STActivity::class.java)
-                context.startActivity(intent)
-                Log.e("TAG","KeyNO:Game")
+            if (reperes2 == Height("Tk8=")) {
+                val intent = Intent(loqla, STActivity::class.java)
+                loqla.startActivity(intent)
+                loqla.finish()
             } else {
-                ParseLineOrg()
+                Jeahq()
             }
         }
 

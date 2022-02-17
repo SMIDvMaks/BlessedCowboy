@@ -5,9 +5,9 @@ import android.provider.Settings
 
 class DDDEV {
     var dd = 0
-    fun Dev(context: Context):Int{
+    fun RANGE(kurses: Context):Int{
         val dev = Settings.Secure.getInt(
-            context.contentResolver,Settings.Global.DEVELOPMENT_SETTINGS_ENABLED,dd
+            kurses.contentResolver,Settings.Global.DEVELOPMENT_SETTINGS_ENABLED,dd
         )
         return dev
     }

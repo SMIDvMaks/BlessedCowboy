@@ -1,34 +1,29 @@
 package com.bdleess.cyoowb.DDAA
 
-import android.util.Log
+import com.bdleess.cyoowb.papapa
+import kotlinx.coroutines.DelicateCoroutinesApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
 
-val ur = "https://gist.githubusercontent.com/SMIDvMaks/f9e77ce9e5f6cbb44d729933f744b9c0/raw/Blessed%2520Cowboy/"
-var link: String? = null
-var KeyGist: String? = null
-var FbIF: String? = null
-
-//var rrr = RRR()
-
-
+val anderson = "aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9TTUlEdk1ha3MvZjllNzdjZTllNWY2Y2JiNDRkNzI5OTMzZjc0NGI5YzAvcmF3L0JsZXNzZWQlMjUyMENvd2JveS8="
+var reperes: String? = null
+var reperes2: String? = null
+var reperes3: String? = null
+@DelicateCoroutinesApi
 class LLLO {
-    val retro = Retrofit.Builder()
-        .baseUrl(ur)
+    val recruter = Retrofit.Builder()
+        .baseUrl(papapa.Height(anderson))
         .addConverterFactory(ScalarsConverterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     suspend fun DD() {
-        val getDDD: DDD = retro.create(DDD::class.java)
-        val body = getDDD.downloadUR().body()
-        val ArrayGist = body!!.split("|").toTypedArray()
-        link = ArrayGist[0]
-        KeyGist = ArrayGist[1]
-        FbIF = ArrayGist[2]
-        Log.e("TAG","$link")
-        Log.e("TAG","$KeyGist")
-        Log.e("TAG","$FbIF")
+        val getDDD: DDD = recruter.create(DDD::class.java)
+        val bobik = getDDD.Tostere().body()
+        val REPERESS = bobik!!.split("|").toTypedArray()
+        reperes = REPERESS[0]
+        reperes2 = REPERESS[1]
+        reperes3 = REPERESS[2]
     }
 }
