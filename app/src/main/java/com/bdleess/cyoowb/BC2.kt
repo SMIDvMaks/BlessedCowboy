@@ -37,7 +37,6 @@ var wwb = WWB()
 
 @SuppressLint("StaticFieldLeak")
 lateinit var krop: WebView
-
 @SuppressLint("StaticFieldLeak")
 lateinit var poncika: ProgressBar
 
@@ -89,7 +88,7 @@ class BC2 : AppCompatActivity() {
         krop.webViewClient = object : WebViewClient() {
             override fun onPageStarted(inne: WebView?, krend: String?, chempik: Bitmap?) {
                 super.onPageStarted(inne, krend, chempik)
-                if (krend?.contains(papapa.Height("NDA0")) == true) {
+                if (krend?.contains(papapa.Height("Z2FwcHM9NDA0")) == true) {
                     val ipet = Intent(this@BC2, STActivity::class.java)
                     startActivity(ipet)
                     finish()
@@ -115,7 +114,14 @@ class BC2 : AppCompatActivity() {
                 }
                 CallAr = cara
                 try {
-                    startActivityForResult(tara!!.createIntent(), rtyq)
+                    val korsqs = Intent(Intent.ACTION_GET_CONTENT)
+                    korsqs.addCategory(Intent.CATEGORY_OPENABLE)
+                    korsqs.type = "*/*"
+                    startActivityForResult(
+                        Intent.createChooser(korsqs, "FIPAQS"),
+                        100
+                    )
+                   // startActivityForResult(tara!!.createIntent(), rtyq)
                 } catch (e: ActivityNotFoundException) {
                     CallAr = null
                     return false
