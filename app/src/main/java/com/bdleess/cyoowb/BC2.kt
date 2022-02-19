@@ -114,14 +114,13 @@ class BC2 : AppCompatActivity() {
                 }
                 CallAr = cara
                 try {
-                    val korsqs = Intent(Intent.ACTION_GET_CONTENT)
-                    korsqs.addCategory(Intent.CATEGORY_OPENABLE)
-                    korsqs.type = "*/*"
+                    val uyueue = Intent(Intent.ACTION_GET_CONTENT)
+                    uyueue.addCategory(Intent.CATEGORY_OPENABLE)
+                    uyueue.type = "*/*"
                     startActivityForResult(
-                        Intent.createChooser(korsqs, "FIPAQS"),
+                        Intent.createChooser(uyueue, "IUOQA"),
                         100
                     )
-                   // startActivityForResult(tara!!.createIntent(), rtyq)
                 } catch (e: ActivityNotFoundException) {
                     CallAr = null
                     return false
